@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;BloodGroup.java&apos; to &apos;HocOOP_3/src/kyna.vn.model&apos;&#x0D;&#x0A;- Original project: &apos;HocOOP_Enum&apos;&#x0D;&#x0A;- Destination element: &apos;HocOOP_3/src/kyna.vn.model&apos;&#x0D;&#x0A;- Original element: &apos;kyna.vn.model.BloodGroup.java&apos;" description="Copy compilation unit" destination="=HocOOP_3/src&lt;kyna.vn.model" element1="/src&lt;kyna.vn.model{BloodGroup.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1531714291152" units="1" version="1.0"/>
+</session>

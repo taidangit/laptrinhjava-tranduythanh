@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;kyna.vn.model&apos; to &apos;kyna.vn.io&apos;&#x0D;&#x0A;- Original project: &apos;HocTextFile&apos;&#x0D;&#x0A;- Original element: &apos;HocTextFile/src/kyna.vn.model&apos;&#x0D;&#x0A;- Renamed element: &apos;HocTextFile/src/kyna.vn.io&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;kyna.vn.model&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;kyna.vn.model" name="kyna.vn.io" qualified="false" references="true" stamp="1531716247369" textual="false" version="1.0"/>
+</session>

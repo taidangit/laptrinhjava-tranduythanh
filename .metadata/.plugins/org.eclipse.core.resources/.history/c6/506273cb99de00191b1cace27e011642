@@ -1,0 +1,128 @@
+package kyna.vn.test;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+import kyna.vn.io.FileFactory;
+import kyna.vn.model.DanhBa;
+
+public class TestContact {
+
+	static Map<Integer, Contact> csdl=new HashMap<>();
+	public static void menu() {
+		System.out.println("1.Thêm");
+		System.out.println("2.Xuất");
+		System.out.println("3.Sửa");
+		System.out.println("4.Xóa");
+		System.out.println("5.Tìm kiếm");
+		System.out.println("6.Sắp xếp");
+		System.out.println("7.Lưu");
+		System.out.println("8.Đọc");
+		System.out.println("9.Thoát");
+		System.out.println("Chọn gì:");
+		int n=new Scanner(System.in).nextInt();
+		switch (n) {
+			case 1:
+				Them();
+				break;
+			case 2:
+				Xuat();
+				break;
+			case 3:
+				Sua();
+				break;
+			case 4:
+				Xoa();
+				break;
+			case 5:
+				TimKiem();
+				break;
+			case 6:
+				SapXep();
+				break;
+			case 7:
+				LuuFile();
+				break;
+			case 8:
+				DocFile();
+				break;
+			case 9:
+				System.out.println("Bye Bye!");
+				System.exit(0);
+			default:
+				System.err.println("Nhập lụi rồi!");
+				break;
+			}
+	}
+	private static void DocFile() {
+		csdl=FileFactory.readFile("E:/danhba.dat");
+	}
+	private static void LuuFile() {
+		boolean kq=FileFactory.saveFile(csdl, "E:/danhba.dat");
+		if(kq) {
+			System.out.println("Lưu thành công");
+		}
+	}
+	private static void SapXep() {
+	}
+	private static void TimKiem() {
+		System.out.println("Nhập phone:");
+		String phone=new Scanner(System.in).nextLine();
+		for(Map.Entry<Integer, Contact> item : csdl.entrySet()) {
+			if(item.getValue().getPhone().startsWith(phone)) {
+			    System.out.println(item.getValue());
+			}
+		}
+	}
+	private static void Xoa() {
+		System.out.println("Nhập mã muốn xóa:");
+		int ma=new Scanner(System.in).nextInt();
+		if(csdl.containsKey(ma)) {
+			csdl.remove(ma);
+		} else {
+			System.out.println("Không tìm thấy mã để xóa");
+		}
+	}
+	private static void Sua() {
+		System.out.println("Nhập mã muốn sửa:");
+		int ma=new Scanner(System.in).nextInt();
+		if(csdl.containsKey(ma)) {
+			System.out.println("Nhập tên:");
+			String ten=new Scanner(System.in).nextLine();
+			System.out.println("Nhập phone:");
+			String phone=new Scanner(System.in).nextLine();
+			
+			Contact db=new Contact(ma, ten, phone);
+			csdl.put(ma, db);
+		} else {
+			System.out.println("Mã không tồn tại");
+		}
+	}
+	private static void Xuat() {
+		System.out.println("Danh sách danh bạ:");
+		for(Map.Entry<Integer, DanhBa> item : csdl.entrySet()) {
+			System.out.println(item.getValue());
+		}
+	}
+	private static void Them() {
+		System.out.println("Nhập mã:");
+		int ma=new Scanner(System.in).nextInt();
+		System.out.println("Nhập tên:");
+		String ten=new Scanner(System.in).nextLine();
+		System.out.println("Nhập phone:");
+		String phone=new Scanner(System.in).nextLine();
+		
+		DanhBa db=new DanhBa(ma, ten, phone);
+		if(!csdl.containsKey(ma)) {
+			csdl.put(ma, db);
+		}
+	}
+	public static void main(String[] args) {
+		while(true) {
+			menu();
+		}
+	}
+
+}

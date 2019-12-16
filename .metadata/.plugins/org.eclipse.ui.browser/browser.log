@@ -1,0 +1,5 @@
+
+Jul 13, 2018 17:17:19.50 NEW SESSION
+Jul 13, 2018 17:17:19.51 [5336:4784:0713/171719.507:ERROR:install_util.cc(589)] Unable to create registry key HKLM\SOFTWARE\Policies\Google\Chrome for reading result=2
+Jul 13, 2018 17:17:19.80 [5336:4784:0713/171719.807:ERROR:in_progress_cache_impl.cc(188)] Cache is not initialized, cannot RetrieveEntry.
+Jul 13, 2018 17:17:19.84 [5336:4784:0713/171719.807:ERROR:in_progress_cache_impl.cc(188)] Cache is not initialized, cannot RetrieveEntry.

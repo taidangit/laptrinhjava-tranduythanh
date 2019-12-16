@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+D:\HOC TAP\HOC LAP TRINH\LapTrinhJavaCoBan\SourceCode2\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3563867738.index
+3023663506.index
+3142783030.index
+2038329993.index
+2717802884.index
+3195093427.index
